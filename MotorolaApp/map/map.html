@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Motorola GPS</title>
+<link rel="stylesheet" href="theme/default/style.css" type="text/css">
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="lib/OpenLayers.js"></script>
+<script type="text/javascript">
+	var map, layer;
+	function init() {
+		map = new OpenLayers.Map('map');
+		var osm = new OpenLayers.Layer.OSM("Local Tiles",
+				"http://localhost:32771/styles/osm-bright/${z}/${x}/${y}.png");
+		map.addLayer(osm);
+		map.setCenter(new OpenLayers.LonLat(0, 0), 1);
+	}
+</script>
+<script type="text/javascript">
+	function addmarker(id, lat, lon) {
+		var markers = new OpenLayers.Layer.Markers("Markers");
+		map.addLayer(markers);
+		markers.id=id;
+		var zoom = 18;
+		var lat = lat;
+		var lon = lon;
+		var size = new OpenLayers.Size(21, 25);
+		var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
+		var icon = new OpenLayers.Icon('marker.png', size, offset);
+		var lonLat = new OpenLayers.LonLat(lon, lat).transform(
+				new OpenLayers.Projection("EPSG:4326"), map
+						.getProjectionObject());
+		markers.addMarker(new OpenLayers.Marker(lonLat), icon);
+		var popup = new OpenLayers.Popup.FramedCloud("Popup", lonLat, null, id +'<br>'+lon+'<br>'+lat,
+				null, true);
+		map.addPopup(popup, false);
+		map.setCenter(lonLat, zoom);
+	}
+</script>
+</head>
+<body onload="init()">
+	<style>
+#map {
+	height: 400px;
+	width: 100%;
+	border: 1px solid black;
+}
+</style>
+	<div id="map"></div>
+</body>
+</html>
