@@ -4,7 +4,7 @@ public class TEA {
 		int[] data = new int[2];
 		String x;
 	public TEA(String[] keydata) {
-		int[] key = new int[] {0x152C7E9D,0x38BE41C7,0x71E96CA4,0x6CAC1AFC };
+	//	int[] key your own key;
 		data[0] = (int) Long.parseLong(keydata[0], 16);
 		data[1] = (int) Long.parseLong(keydata[1], 16);
 		int[] encrypt= encrypt(data, key);
