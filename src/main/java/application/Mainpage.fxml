@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="635.0" style="-fx-background-color: #082452;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="priv.chunyu.Controller.MyController">
+	<children>
+		<AnchorPane prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: #082452;">
+			<children>
+            <ScrollPane prefHeight="700.0" prefWidth="306.0">
+               <content>
+      				<VBox alignment="BASELINE_LEFT" prefHeight="701.0" prefWidth="299.0" style="-fx-background-color: #082452;">
+      					<children>
+      						<Button fx:id="ESN_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ESN" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="ESN" textFill="WHITE">
+      							<font>
+      								<Font size="22.0" />
+      							</font>
+      						</Button>
+      						<Button fx:id="MN_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#MN" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="Model Number" textFill="WHITE">
+      							<font>
+      								<Font size="22.0" />
+      							</font>
+      						</Button>
+      						<Button fx:id="SN_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#SN" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="SerialNumber" textFill="WHITE">
+      							<font>
+      								<Font size="22.0" />
+      							</font>
+      						</Button>
+      						<Button fx:id="Stun_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Stun" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="STUN" textFill="WHITE">
+      							<font>
+      								<Font size="22.0" />
+      							</font>
+      						</Button>
+      						<Button fx:id="CALL_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#CALL" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="CallRequest" textFill="WHITE">
+      							<font>
+      								<Font size="22.0" />
+      							</font>
+      						</Button>
+      						<Button fx:id="EMGEREQ_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#EMG" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="EmergecnyControl" textFill="WHITE">
+      							<font>
+      								<Font size="22.0" />
+      							</font>
+      						</Button>
+                        <Button fx:id="UnStun_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#UnStun" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="UnStun" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="RemotMonitor_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#RemoteMonitor" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="RemotMonitor" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="RSSI_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#RSSI" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="RSSI" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="IMR_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#IMR" prefHeight="51.0" prefWidth="280.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="Immediate Location" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Map_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Map_Button" prefHeight="51.0" prefWidth="280.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="Map" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                         <Button fx:id="Marker_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#add_Marker" prefHeight="51.0" prefWidth="280.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="AddMarker" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="UserList_Button" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Map_Button" prefHeight="51.0" prefWidth="280.0" style="-fx-background-color: #393351; -fx-background-radius: 30 0 0 30;" text="UserList" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+      					</children>
+      				</VBox>
+               </content>
+            </ScrollPane>
+			</children>
+		</AnchorPane>
+		<TextArea fx:id="Text" layoutX="301.0" layoutY="387.0" prefHeight="313.0" prefWidth="334.0" />
+      <TextField fx:id="id_TextField" layoutX="393.0" layoutY="275.0" text="ID" />
+	</children>
+</AnchorPane>
